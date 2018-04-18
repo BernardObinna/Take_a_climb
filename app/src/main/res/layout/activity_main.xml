@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="#999"
+
+    >
+
+
+    <Button
+        android:id="@+id/home_start_button"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="#666"
+        android:onClick="myDialog"
+
+
+        android:text="Start"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/home_vs_computer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/home_start_button"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="#666"
+        android:onClick="setComputer"
+        android:padding="5dp"
+
+
+        android:text="P VS computer"
+        android:textColor="#000"
+        android:textSize="30sp"
+
+
+        />
+
+    <Button
+        android:id="@+id/home_vs_Player_button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/home_vs_computer_button"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="#666"
+        android:onClick="setpvp"
+        android:padding="5dp"
+
+
+        android:text="P1 VS p2"
+        android:textColor="#000"
+        android:textSize="30sp"
+
+
+        />
+
+
+</RelativeLayout>

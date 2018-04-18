@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <TextView
+            android:id="@+id/player_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:background="#999"
+            android:fontFamily="sans-serif-medium"
+            android:text="Player 1"
+            android:textColor="#0000ff"
+
+            android:textSize="20sp"
+
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/player_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player_1"
+            android:layout_marginHorizontal="5dp"
+            android:background="#999"
+            android:fontFamily="sans-serif-medium"
+
+
+            android:text="Player 2"
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="#999"
+            android:fontFamily="sans-serif-medium"
+
+            android:text="Turn"
+            android:textColor="#000"
+            android:textSize="30sp"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/turn_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toRightOf="@id/turn"
+            android:background="#999"
+            android:fontFamily="sans-serif-medium"
+            android:text="x"
+
+            android:textColor="#f000"
+            android:textSize="30sp"
+
+
+            />
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#666"
+            android:onClick="myDialog"
+
+            android:text="Restart"
+            android:textColor="#000"
+            android:textSize="25sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <!--
+            <view
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:paddingVertical="20dp"
+                />
+
+                -->
+
+            <TextView
+                android:id="@+id/spot_00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text=""
+                android:textSize="56sp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/spot_01"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text=""
+
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text=""
+                android:textSize="56sp" />
+
+
+            <TextView
+                android:id="@+id/spot_03"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/spot_04"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            >
+
+
+            <TextView
+                android:id="@+id/spot_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/spot_11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+            <TextView
+                android:id="@+id/spot_12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/spot_14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            >
+
+
+            <TextView
+                android:id="@+id/spot_20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+            <TextView
+                android:id="@+id/spot_21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/spot_24"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/extra_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/spot_30"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+            <TextView
+                android:id="@+id/spot_31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_34"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/extra_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/spot_40"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+            <TextView
+                android:id="@+id/spot_41"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/spot_42"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+
+                android:background="#999"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_43"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/spot_44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#999"
+
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text=""
+                android:textSize="56sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="Reset" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:onClick="board_changer"
+            android:text="Switch Boards" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
